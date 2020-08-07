@@ -17,7 +17,7 @@ class _HomeState extends State<Home> {
               children: [
                 Container(
                   width: MediaQuery.of(context).size.width,
-                  height: MediaQuery.of(context).size.height / 2.8,
+                  height: MediaQuery.of(context).size.height / 2.5,
                   decoration: BoxDecoration(
                       gradient: LinearGradient(
                           colors: [
@@ -53,23 +53,30 @@ class _HomeState extends State<Home> {
                 ),
               ],
             ),
-            SingleChildScrollView(
-              child: Container(
-                margin: EdgeInsets.symmetric(horizontal: 30, vertical: 10),
-                padding: EdgeInsets.all(10),
-                width: MediaQuery.of(context).size.width,
-                child: Column(
-                  children: [
-                    _asal(),
-                    _tujuan(),
-                    _berangkat(),
-                    _pulang(),
-                    _penumpang(),
-                    _button(null)
-                  ],
-                ),
+            Container(
+              margin: EdgeInsets.symmetric(horizontal: 30, vertical: 10),
+              padding: EdgeInsets.all(10),
+              width: MediaQuery.of(context).size.width,
+              child: Column(
+                children: [
+                  _asal(),
+                  _tujuan(),
+                  _berangkat(),
+                  _pulang(),
+                  _penumpang(),
+                  _button(null)
+                ],
               ),
-            )
+            ),
+            SizedBox(height: 10,),
+            Container(
+              height: 200,
+              margin: EdgeInsets.all(5),
+              decoration: BoxDecoration(
+                border: Border.all(color: Colors.black, width: 1, style: BorderStyle.solid)
+              ),
+            ),
+
           ],
         ),
       ),
