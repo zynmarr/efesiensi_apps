@@ -11,6 +11,7 @@ class _HomeState extends State<Home> {
     return SafeArea(
       child: Scaffold(
         backgroundColor: Colors.blue,
+        body: Container(),
       ),
     );
   }

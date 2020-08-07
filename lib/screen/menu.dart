@@ -2,6 +2,8 @@ import 'package:efisiensiku_apps/screen/menu/home.dart';
 import 'package:efisiensiku_apps/screen/menu/profile.dart';
 import 'package:efisiensiku_apps/screen/menu/ticket.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
+import 'dart:async';
 
 class Menu extends StatefulWidget {
   @override
@@ -9,7 +11,7 @@ class Menu extends StatefulWidget {
 }
 
 class _MenuState extends State<Menu> {
-  int currentIndex;
+  int currentIndex = 0;
 
   List children = [
     Home(),
@@ -61,8 +63,8 @@ class _MenuState extends State<Menu> {
                     padding: EdgeInsets.all(15),
                     child: Image.asset(
                       children[currentIndex] == children[1]
-                          ? 'assets/images/barIcons/chat1.png'
-                          : 'assets/images/barIcons/chat.png',
+                          ? 'assets/images/barIcons/ticket1.png'
+                          : 'assets/images/barIcons/ticket.png',
                     ),
                   ),
                 ),

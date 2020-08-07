@@ -1,6 +1,7 @@
 import 'package:efisiensiku_apps/Auth/register.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:get/get.dart';
 
 class Login extends StatefulWidget {
   @override
@@ -116,7 +117,9 @@ class _LoginState extends State<Login> {
                                         borderRadius:
                                             BorderRadius.circular(20.0)),
                                     padding: const EdgeInsets.all(0.0),
-                                    onPressed: () {},
+                                    onPressed: () {
+                                      Get.toNamed('/menu');
+                                    },
                                     color: Colors.transparent,
                                     child: Ink(
                                       decoration: BoxDecoration(
@@ -196,12 +199,7 @@ class _LoginState extends State<Login> {
                   ),
                   GestureDetector(
                     onTap: () {
-                      Navigator.push(
-                        context,
-                        MaterialPageRoute(
-                          builder: (_) => Register(),
-                        ),
-                      );
+                      Get.toNamed('/register');
                     },
                     child: Text(
                       "Sign Up",

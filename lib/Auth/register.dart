@@ -1,6 +1,7 @@
 import 'package:efisiensiku_apps/Auth/login.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:get/get.dart';
 
 class Register extends StatefulWidget {
   @override
@@ -274,12 +275,7 @@ class _RegisterState extends State<Register> {
                   ),
                   GestureDetector(
                     onTap: () {
-                      Navigator.push(
-                        context,
-                        MaterialPageRoute(
-                          builder: (_) => Login(),
-                        ),
-                      );
+                      Get.toNamed('/');
                     },
                     child: Text(
                       "Login",
