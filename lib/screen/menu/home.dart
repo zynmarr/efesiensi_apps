@@ -6,6 +6,7 @@ class Home extends StatefulWidget {
 }
 
 class _HomeState extends State<Home> {
+  
   @override
   Widget build(BuildContext context) {
     return SafeArea(
@@ -68,15 +69,20 @@ class _HomeState extends State<Home> {
                 ],
               ),
             ),
-            SizedBox(height: 10,),
+            SizedBox(
+              height: 10,
+            ),
             Container(
               height: 200,
               margin: EdgeInsets.all(5),
               decoration: BoxDecoration(
-                border: Border.all(color: Colors.black, width: 1, style: BorderStyle.solid)
+                border: Border.all(
+                  color: Colors.black,
+                  width: 1,
+                  style: BorderStyle.solid,
+                ),
               ),
             ),
-
           ],
         ),
       ),
@@ -123,6 +129,8 @@ class _HomeState extends State<Home> {
     );
   }
 
+  bool pp = false;
+
   Widget _tujuan() {
     return Container(
       width: MediaQuery.of(context).size.width,
@@ -154,12 +162,21 @@ class _HomeState extends State<Home> {
             ),
           ),
           Column(
-            mainAxisAlignment: MainAxisAlignment.start,
+            // mainAxisAlignment: MainAxisAlignment.start,
             children: [
               Text("Pulang-Pergi?", style: TextStyle(color: Colors.black45)),
               Container(
-                  padding: EdgeInsets.only(left: 40),
-                  child: Switch(value: true, onChanged: null)),
+                padding: EdgeInsets.only(left: 40),
+                child: Switch(
+                  value: pp,
+                  onChanged: (bool newValue) {
+                    setState(() {
+                      pp = newValue;
+                      print(pp);
+                    });
+                  },
+                ),
+              ),
             ],
           )
         ],
@@ -280,7 +297,7 @@ class _HomeState extends State<Home> {
       child: RaisedButton(
         splashColor: Color(0xFFff9800),
         shape:
-            RoundedRectangleBorder(borderRadius: BorderRadius.circular(20.0)),
+            RoundedRectangleBorder(borderRadius: BorderRadius.circular(30.0)),
         padding: const EdgeInsets.all(0.0),
         onPressed: () {
           onPressed;
@@ -304,8 +321,9 @@ class _HomeState extends State<Home> {
           child: Container(
             decoration: BoxDecoration(
               borderRadius: BorderRadius.all(
-                Radius.circular(20.0),
+                Radius.circular(50.0),
               ),
+              color: Colors.transparent
             ),
             child: Center(
               child: Text(
