@@ -1,3 +1,4 @@
+import 'package:efisiensiku_apps/component/settings.dart';
 import 'package:flutter/material.dart';
 
 class Profile extends StatefulWidget {
@@ -44,7 +45,10 @@ class _ProfileState extends State<Profile> {
                               Icons.settings,
                               color: Colors.white,
                             ),
-                            onPressed: null),
+                            onPressed: () {
+                              Navigator.of(context).push(MaterialPageRoute(
+                                  builder: (context) => Settings()));
+                            }),
                       ],
                     ),
                   ),
